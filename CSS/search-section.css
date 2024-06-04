@@ -1,0 +1,62 @@
+body:has(#search-page) {
+    position: relative;
+}
+
+/* .search-page .marvel-svg {
+    border: 1px solid black;
+    transform: translateY(17rem) scale(2.5);
+} */
+
+.input-div {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 32rem;
+    margin: auto;
+    margin-top: 15vh;
+    gap: .5rem;
+    position: absolute;
+    z-index: 100;
+    inset: 5rem 5rem auto;
+    }
+
+.marvel .svg {
+    width: 20rem;
+    border: 3px solid black;
+}
+
+.input-div input {
+border: 2px solid black;
+border-radius: .5rem;
+padding: .2rem .5rem;
+outline: none;
+font-size: 2rem;
+width: 100%;
+font-family: "Happy Monkey", system-ui;
+text-transform: capitalize;
+}
+
+.input-div .suggestions {
+width: 100%;
+display: flex;
+flex-direction: column;
+margin: 0;
+padding: 0;
+background-color: aliceblue;
+/* border: 2px solid black; */
+}
+
+.input-div .suggestions li {
+list-style: none;
+padding: .2rem 0rem;
+cursor: pointer;
+}
+
+.input-div .suggestions li:hover {
+    font-weight: 500;
+    }
+
+.input-div:not(:has(input:focus)) .suggestions:not(:hover) {
+    display: none;
+    }

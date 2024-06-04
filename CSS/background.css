@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    max-height: 100vh;
+    margin: 0;
+    position: relative;
+}
+
+#search-page {
+    width: 1000px;
+    height: 98%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    inset: 0;
+    margin: auto;
+}
+
+body .band-div {
+    width: 12rem;
+
+}
+
+body .band-div .band {
+    width: 100%;
+
+}
+
+.band img {
+    border: 2px solid black;
+    filter: grayscale(1);
+}
+
+.band img:hover {
+    border: 2px solid black;
+    filter: grayscale(0);
+}

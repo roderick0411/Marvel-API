@@ -1,0 +1,106 @@
+/* ------------------------Fonts----------------------- */
+
+.happy-monkey-regular {
+    font-family: "Happy Monkey", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .bangers-regular {
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .patrick-hand-sc-regular {
+    font-family: "Patrick Hand SC", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .rubik-mono-one-regular {
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+  }  
+
+/* --------------------General settings---------------------- */
+
+*, *::after, *::before {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.hidden {
+    display: none!important;
+}
+
+/* ------------------------Home Page----------------------- */
+
+body {
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    min-width: 1000px;
+    /* cursor: url('../src/cursor.svg'), auto;	 */
+}
+
+nav {
+    position: fixed;
+    z-index: 200;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 3rem;
+    font-family: "Bangers", system-ui;
+    font-size: 3rem;
+    background-color: #202020;
+    color: aliceblue;
+    align-items: center;
+    min-width: 1000px;
+}
+
+nav .marvel-svg{
+    height: 3rem;
+}
+
+nav span {
+  cursor: pointer;
+}
+
+main {
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+}
+
+/* --------------Comic style halftone background--------------- */
+
+.comic-halftone-bg {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  --dotSize: 0.2rem;
+--bgSize: 1.35rem;
+--bgPosition: calc(var(--bgSize) / 2);
+
+background-image: radial-gradient(
+    circle at center,
+    #fdb455 var(--dotSize),
+    transparent 0
+  ), radial-gradient(circle at center, #fdb455 var(--dotSize), transparent 0);
+background-size: var(--bgSize) var(--bgSize);
+background-position: 0 0, var(--bgPosition) var(--bgPosition);
+z-index: -1;
+background-color: #FFFEC4;
+}
+
+
+
