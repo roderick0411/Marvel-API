@@ -86,6 +86,7 @@ function createCharacterCard(data, col) {
         : "favorites=" + Array.from(favorites.characterIds).join(",");
     // link.remove();
     event.target.closest("a").remove();
+    window.location.href = "./favorites.html?" + favoritesQueryParam;
     populateFavorites();
   });
   caption.textContent = data.name;
@@ -174,7 +175,9 @@ function createEventListeners(characterID) {
       console.log(favorites);
       favoritesButton.setAttribute("data-state", "add");
     }
-    favoritesButton.textContent = favorites.characterIds.has(characterID)
+    favoritesButton.textContent = favorites.characterIds.has(
+      Number(characterID)
+    )
       ? "Remove from Favorites"
       : "Add to Favorites";
     favoritesQueryParam =
