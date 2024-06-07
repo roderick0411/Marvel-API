@@ -38,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // console.log(favorites);
     // console.log(characterID);
     favoritesPage = "./favorites.html?";
-    homePage = "../index.html?";
+    homePage = "/Marvel-API-App/?";
     document
       .querySelector("nav .home-link")
       .setAttribute("href", homePage + favoritesQueryParam);
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (path === "/Pages/favorites.html") {
     console.log(window.location.pathname);
     characterPage = "./character.html?";
-    homePage = "../index.html?";
+    homePage = "/Marvel-API-App/?";
     populateFavorites();
   }
   if (["/index.html", "/Marvel-API-App/"].includes(path)) {
