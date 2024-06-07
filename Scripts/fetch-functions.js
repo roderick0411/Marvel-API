@@ -90,7 +90,12 @@ function createCharacterCard(data, col) {
         : "favorites=" + Array.from(favorites.characterIds).join(",");
     // link.remove();
     event.target.closest("a").remove();
-    window.location.href = "./favorites.html?" + favoritesQueryParam;
+    if (window.location.pathname === "/Marvel-API-App/Pages/favorites.html") {
+      window.location.href =
+        "/Marvel-API-App/Pages/favorites.html?" + stringToSend;
+    } else {
+      window.location.href = "./favorites.html?" + favoritesQueryParam;
+    }
     populateFavorites();
   });
   caption.textContent = data.name;
@@ -138,7 +143,12 @@ function populateFavorites() {
     .addEventListener("click", (event) => {
       event.preventDefault();
       let stringToSend = `${favoritesQueryParam}`;
-      window.location.href = "../index.html?" + stringToSend;
+      if (window.location.pathname === "/Marvel-API-App/Pages/favorites.html") {
+        window.location.href =
+          "https://roderick0411.github.io/Marvel-API-App/?" + stringToSend;
+      } else {
+        window.location.href = "../index.html?" + stringToSend;
+      }
     });
 }
 
