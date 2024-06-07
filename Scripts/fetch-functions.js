@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     homePage = "../index.html?";
     populateFavorites();
   }
-  if (path === "/index.html") {
+  if (["/index.html", "/Marvel-API-App/"].includes(path)) {
     favoritesPage = "./Pages/favorites.html?";
     characterPage = "./Pages/character.html?";
   }
