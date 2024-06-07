@@ -39,7 +39,8 @@ text-transform: capitalize;
 
 .input-div .suggestions {
 width: 100%;
-/* max-height: 10rem; */
+max-height: 18rem;
+overflow-y: scroll;
 display: flex;
 flex-direction: column;
 margin: 0;

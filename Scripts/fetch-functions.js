@@ -250,7 +250,7 @@ function searchSuggestions(value, favorites) {
     return;
   }
   try {
-    const api = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${value}&limit=15&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const api = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${value}&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     fetch(api)
       .then((res) => res.json())
       .then((res) => populateSuggestions(res.data.results, favorites));
