@@ -136,14 +136,14 @@ class movingBandUp {
   }
 
   async slideBand() {
-    console.log("---------------------------------------");
+    // console.log("---------------------------------------");
     this.renders++;
     if (this.renders < 0) {
       return;
     }
     const band = this.band;
     const firstImgHeight = Math.round(this.firstImgHeight * 100) / 100 + 8;
-    console.log(`firstImgHeight: ${firstImgHeight}`);
+    // console.log(`firstImgHeight: ${firstImgHeight}`);
     const images = this.images;
     // find height of first image & calculate the slide speed accordingly
     // speed ~ 40px/sec
@@ -249,7 +249,7 @@ class movingBandDown {
     }
     Promise.all(promises).then(() => {
       setTimeout(() => {
-        console.log(this);
+        // console.log(this);
         this.lastImgHeight = parseFloat(
           getComputedStyle(band.lastChild).height
         );
@@ -265,14 +265,14 @@ class movingBandDown {
   }
 
   async slideBand() {
-    console.log("---------------------------------------");
+    // console.log("---------------------------------------");
     this.renders++;
     if (this.renders < 0) {
       return;
     }
     const band = this.band;
     const lastImgHeight = Math.round(this.lastImgHeight * 100) / 100 + 8;
-    console.log(`lastImgHeight: ${lastImgHeight}`);
+    // console.log(`lastImgHeight: ${lastImgHeight}`);
     const images = this.images;
     // find height of first image & calculate the slide speed accordingly
     // speed ~ 40px/sec
