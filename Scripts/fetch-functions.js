@@ -34,7 +34,11 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(window.location);
   console.log(path);
   console.log("Page loaded");
-  if (path === "/Pages/character.html") {
+  if (
+    ["/Pages/character.html", "/Marvel-API-App/Pages/character.html"].includes(
+      path
+    )
+  ) {
     // console.log(favorites);
     // console.log(characterID);
     favoritesPage = "./favorites.html?";
@@ -48,7 +52,11 @@ document.addEventListener("DOMContentLoaded", () => {
     createCharacterSection(characterID, favorites);
     createEventListeners(characterID);
   }
-  if (path === "/Pages/favorites.html") {
+  if (
+    ["/Pages/favorites.html", "/Marvel-API-App/Pages/favorites.html"].includes(
+      path
+    )
+  ) {
     console.log(window.location.pathname);
     characterPage = "./character.html?";
     homePage = "../index.html?";
@@ -57,10 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (["/index.html", "/Marvel-API-App/"].includes(path)) {
     favoritesPage = "./Pages/favorites.html?";
     characterPage = "./Pages/character.html?";
-  }
-  if (path === "/Marvel-API-App/Pages/favorites.html") {
-    characterPage = "./character.html?";
-    homePage = "/Marvel-API-App/Pages/?";
   }
   // Add favorites to url parameters
   console.log(`Favorites page link: ${favoritesPage + favoritesQueryParam}`);
