@@ -131,6 +131,7 @@ function renderCharacter(id, col) {
 }
 
 function populateFavorites() {
+  console.log(`window.location.pathname: ${window.location.pathname}`);
   document
     .querySelectorAll(".favorites-grid .col")
     .forEach((col) => (col.innerHTML = ""));
@@ -145,7 +146,8 @@ function populateFavorites() {
       let stringToSend = `${favoritesQueryParam}`;
       if (window.location.pathname === "/Marvel-API-App/Pages/favorites.html") {
         window.location.href =
-          "https://roderick0411.github.io/Marvel-API-App/?" + stringToSend;
+          "https://roderick0411.github.io/Marvel-API-App/index.html?" +
+          stringToSend;
       } else {
         window.location.href = "../index.html?" + stringToSend;
       }

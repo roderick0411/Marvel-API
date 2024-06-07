@@ -22,7 +22,11 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log(window.location);
   console.log(path);
   console.log("Page loaded");
-  if (["/index.html", "/Marvel-API-App/"].includes(path)) {
+  if (
+    ["/index.html", "/Marvel-API-App/", "/Marvel-API-App/index.html"].includes(
+      path
+    )
+  ) {
     const band1 = new movingBandUp(
       generateDistinctIndex(10, comicCovers.length)
     );
