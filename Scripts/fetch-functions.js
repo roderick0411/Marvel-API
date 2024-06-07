@@ -96,7 +96,7 @@ function createCharacterCard(data, col) {
     event.target.closest("a").remove();
     if (window.location.pathname === "/Marvel-API-App/Pages/favorites.html") {
       window.location.href =
-        "/Marvel-API-App/Pages/favorites.html?" + stringToSend;
+        "/Marvel-API-App/Pages/favorites.html?" + favoritesQueryParam;
     } else {
       window.location.href = "./favorites.html?" + favoritesQueryParam;
     }
@@ -272,11 +272,20 @@ function getCharacter(id, favorites) {
 function populateGallery(data) {
   document.querySelector(".gallery-grid").classList.remove("hidden");
   const gallery = document.querySelector(".gallery-grid .gallery");
-  gallery.innerHTML = "";
+  gallery.innerHTML = `
+            <div class="col"></div>
+            <div class="col"></div>
+            <div class="col"></div>`;
+  const cols = document.querySelectorAll(".gallery-grid .gallery .col");
+  console.log(cols);
+  let i = 0;
   data.forEach((card) => {
     const fig = document.createElement("figure");
     const img = document.createElement("img");
-    img.addEventListener("load", () => gallery.appendChild(fig));
+    img.addEventListener("load", () => {
+      cols[i].appendChild(fig);
+      i = (i + 1) % 3;
+    });
     fig.appendChild(img);
     const caption = document.createElement("figcaption");
     caption.textContent = card.title;
