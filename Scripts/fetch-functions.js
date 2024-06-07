@@ -118,7 +118,7 @@ function createCharacterCard(data, col) {
 
 function renderCharacter(id, col) {
   try {
-    const api = `http://gateway.marvel.com/v1/public/characters/${id}?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const api = `https://gateway.marvel.com/v1/public/characters/${id}?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     fetch(api)
       .then((res) => res.json())
       .then((res) => {
@@ -242,7 +242,7 @@ function searchSuggestions(value, favorites) {
     return;
   }
   try {
-    const api = `http://gateway.marvel.com/v1/public/characters?nameStartsWith=${value}&limit=15&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const api = `https://gateway.marvel.com/v1/public/characters?nameStartsWith=${value}&limit=15&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     fetch(api)
       .then((res) => res.json())
       .then((res) => populateSuggestions(res.data.results, favorites));
@@ -253,7 +253,7 @@ function searchSuggestions(value, favorites) {
 
 function getCharacter(id, favorites) {
   try {
-    const api = `http://gateway.marvel.com/v1/public/characters/${id}?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const api = `https://gateway.marvel.com/v1/public/characters/${id}?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     fetch(api)
       .then((res) => res.json())
       .then((res) => {
@@ -285,7 +285,7 @@ function populateGallery(data) {
 
 function getCharacterComics(id) {
   try {
-    const api = `http://gateway.marvel.com/v1/public/characters/${id}/comics?format=comic&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const api = `https://gateway.marvel.com/v1/public/characters/${id}/comics?format=comic&ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     fetch(api)
       .then((res) => res.json())
       .then((res) => {
@@ -301,7 +301,7 @@ function getCharacterComics(id) {
 
 function getCharacterEvents(id) {
   try {
-    const api = `http://gateway.marvel.com/v1/public/characters/${id}/events?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const api = `https://gateway.marvel.com/v1/public/characters/${id}/events?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     fetch(api)
       .then((res) => res.json())
       .then((res) => {
@@ -317,7 +317,7 @@ function getCharacterEvents(id) {
 
 function getCharacterStories(id) {
   try {
-    const api = `http://gateway.marvel.com/v1/public/characters/${id}/stories?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const api = `https://gateway.marvel.com/v1/public/characters/${id}/stories?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     fetch(api)
       .then((res) => res.json())
       .then((res) => {
@@ -333,7 +333,7 @@ function getCharacterStories(id) {
 
 function getCharacterSeries(id) {
   try {
-    const api = `http://gateway.marvel.com/v1/public/characters/${id}/series?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
+    const api = `https://gateway.marvel.com/v1/public/characters/${id}/series?ts=${ts}&apikey=${publicKey}&hash=${hash}`;
     fetch(api)
       .then((res) => res.json())
       .then((res) => {
